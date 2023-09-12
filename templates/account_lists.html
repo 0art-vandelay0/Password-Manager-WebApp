@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/style.css" type="text/css">
+    <title>Account Lists</title>
+</head>
+<body>
+    <h1>Account Lists</h1>
+    <ul>
+        {% for account_list in account_lists: %}
+        <li><a href="/account_list_accounts?name={{account_list.get_name()}}">{{account_list.get_name()}}</a></li>
+        {% endfor %}
+    </ul>
+        <a href="/" style="color: #819891; font-size: 12px; padding-top: 20px; font-weight: bold; text-decoration: none;"
+            onmouseover="this.style.fontWeight='normal'; this.style.color='#d0989b';"
+            onmouseout="this.style.fontWeight='bold'; this.style.color='#42504c';">go back home.</a>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete an Account</title>
+    <link rel="stylesheet" href="../static/style.css" type="text/css">
+</head>
+<body>
+    <h1>Delete Account</h1>
+    <form action="/delete_account" method="get">
+        <label for="name">Please enter the account to delete:</label>
+        <select name="account_name" id="account_name">
+            {% for account in accounts: %}
+            <option value="{{account.get_name()}}">{{account.get_name()}}</option>
+            {% endfor %}
+        </select>
+        <button type="submit"> Delete </button>
+        <p><a href="/">go home</a></p>
+    </form>
+</body>
+</html>

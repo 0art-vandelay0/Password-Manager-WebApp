@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a New Account</title>
+    <link rel="stylesheet" href="../static/style.css" type="text/css">
+</head>
+<body>
+<h1>Add an Account List</h1>
+<form action="/choose_account_status" method="get">
+    <label>Is this account managed single factor authentication or two factor?</label>
+    <button type="submit" name="status" value="1FA"> Single </button>
+    <button type="submit" name="status" value="2FA"> Two </button>
+        <p><a href="/">go home</a></p>
+</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a New 1FA Account</title>
+    <link rel="stylesheet" href="../static/style.css" type="text/css">
+</head>
+<body>
+<h1>Add account</h1>
+<form action="/new_account" method="post">
+    <input type="hidden" name="status" value="1FA">
+    <label>Enter the Account's info: </label>
+    <table>
+        <tr><th style="width: 175px;">What is the name of the site:</th><td><input type="text" name="website_name"></td></tr>
+        <tr><th>What is the login URL:</th><td><input type="text" name="loginURL"></td></tr>
+        <tr><th>What is your username:</th><td><input type="text" name="username"></td></tr>
+        <tr><th>What is your password:</th><td><input type="text" name="password"></td></tr>
+        <tr><th>What is date of the last pw change:</th><td><input type="text" name="date_last_changed"></td></tr>
+    </table>
+    <button type="submit"> Submit </button>
+        <p style="padding-bottom: 0px; margin-bottom: 2px;"><a href="/">go home</a></p>
+        <p style="padding-bottom: 0px; margin-bottom: 2px;"><a href="#" onclick="history.back(); return false;">go back</a></p>
+</form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Move Account to Account List</title>
+    <link rel="stylesheet" href="../static/style.css" type="text/css">
+</head>
+<body>
+    <h1>Move an Account to an Account List</h1>
+    <form action="/add_account_to_list" method="get">
+        <label for="name">Please enter the account to add:</label>
+        <select name="account_name" id="account_name">
+            {% for account in accounts: %}
+            <option value="{{account.get_name()}}">{{account.get_name()}}</option>
+            {% endfor %}
+        </select>
+        <label for="name">Please enter the account to add:</label>
+        <select name="account_list_name" id="account_list_name">
+            {% for account_list in account_lists: %}
+            <option value="{{account_list.get_name()}}">{{account_list.get_name()}}</option>
+            {% endfor %}
+        </select>
+        <button type="submit"> Add to List </button>
+        <p><a href="/">go home</a></p>
+    </form>
+</body>
+</html>

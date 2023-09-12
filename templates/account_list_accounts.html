@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accounts for {{account_list.get_name()}}</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+    <h1>Accounts for {{account_list.get_name()}}</h1>
+    <table>
+        <th>Status</th><th>Website</th><th>URL</th><th>Username</th><th>Password</th><th>2Factor</th><th>Sec Question</th><th>Sec Answer</th><th>PIN</th>
+        {% for account in account_list: %}
+        <tr>
+            <td>{{account.get_sec_status()}}</td> <td>{{account.get_website_name()}}</td>
+            <td>{{account.get_loginURL()}}</td> <td>{{account.get_username()}}</td>
+            <td>{{account.get_password()}}</td> <td>{{account.get_two_factor_type()}}</td>
+            <td>{{account.get_question()}}</td> <td>{{account.get_answer()}}</td>
+            <td>{{account.get_authentication()}}</td>
+        </tr>
+            {% endfor %}
+    </table>
+        <p><a href="/show_account_lists">back to account lists</a></p>
+        <p><a href="/">go home</a></p>
+</body>
+</html>

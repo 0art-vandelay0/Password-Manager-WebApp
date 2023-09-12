@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../static/style.css" type="text/css">
+        <title>Web Password Manager</title></head>
+    <body>
+        <h1>feed me your passwords</h1>
+        <br>
+        <ul>
+            {% for choice in menu_choices: %}
+            <li><a href="{{choice}}">{{menu_choices[choice]}}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

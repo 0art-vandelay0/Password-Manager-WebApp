@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Account</title>
+    <link rel="stylesheet" href="../static/style.css" type="text/css">
+</head>
+<body>
+    <h1>Update Account</h1>
+    <form action="/update_account" method="post">
+        <label for="name">Please enter the account/username combo to update:</label>
+        <select name="account_name" id="account_name">
+            {% for account in accounts: %}
+            <option value="{{account.get_name()}}">{{account.get_name()}}</option>
+            {% endfor %}
+        </select>
+        <table>
+            <tr><th>What is your new password:</th><td><input type="text" name="new_password"></td></tr>
+        </table>
+        <button type="submit"> Update </button>
+        <p><a href="/">go home</a></p>
+    </form>
+</body>
+</html>

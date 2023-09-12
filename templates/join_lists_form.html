@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Join two Account Lists</title>
+    <link rel="stylesheet" href="../static/style.css" type="text/css">
+</head>
+<body>
+    <h1>Join Lists</h1>
+    <form action="/join_lists" method="get">
+        <label for="name">Please enter the first account:</label>
+        <select name="account_list_name1" id="account_list_name1">
+            {% for account_list in account_lists: %}
+            <option value="{{account_list.get_name()}}">{{account_list.get_name()}}</option>
+            {% endfor %}
+        </select>
+        <label for="name">Please enter the second account:</label>
+        <select name="account_list_name2" id="account_list_name2">
+            {% for account_list in account_lists: %}
+            <option value="{{account_list.get_name()}}">{{account_list.get_name()}}</option>
+            {% endfor %}
+        </select>
+        <button type="submit"> Join Lists </button>
+        <p><a href="/">go home</a></p>
+    </form>
+</body>
+</html>
